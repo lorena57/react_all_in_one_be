@@ -11,6 +11,6 @@ lorena = User.create(username: 'Lorena57')
 
 entry = Note.create(comments: "Testing out this bad boy", user_id: lorena.id)
 
-shopping = Grocery.new(item: "Oranges", qty: 5, user_id: lorena.id)
+shopping = Grocery.create(item: "Oranges", qty: 5, user_id: lorena.id)
 
-digits = Contact.new(first_name: "Amy", last_name: "Winehouse", phone_number: 818-911-0411, email: 'amy@amy.com', user_id: lorena.id)
+digits = Contact.create(first_name: "Amy", last_name: "Winehouse", phone_number: 818-911-0411, email: 'amy@amy.com', user_id: lorena.id)
