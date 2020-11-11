@@ -1,15 +1,22 @@
 class Api::V1::ContactsController < ApplicationController
 
     def index
-        @contacts = Contact.all
+        contacts = Contact.all
+        render json: contacts
     end
 
     def create
-        
+        contact = Contact.new(contacts_params) 
+        if contact.save
+            render json: contact, status: :accepted
+        else
+            render json: {errors: contact.errors.full_messages}
+        end   
     end
 
     def show
-        
+        contact = Contact.find(params[:id])
+        render json: contact 
     end
 
     private
