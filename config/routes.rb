@@ -3,10 +3,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :contacts
-      resources :groceries
-      resources :notes
-      resources :users
+      resources :contacts, [:index,:create]
+      resources :groceries, [:index,:create]
+      resources :notes, [:index,:create]
+      resources :users, only: [:index,:create]
     end
   end
 
