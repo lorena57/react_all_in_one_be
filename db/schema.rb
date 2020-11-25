@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_10_005158) do
+ActiveRecord::Schema.define(version: 2020_11_25_005916) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,11 +36,11 @@ ActiveRecord::Schema.define(version: 2020_11_10_005158) do
   end
 
   create_table "notes", force: :cascade do |t|
-    t.bigint "user_id"
-    t.string "comments"
+    t.bigint "User_id"
+    t.string "Comments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_notes_on_user_id"
+    t.index ["User_id"], name: "index_notes_on_User_id"
   end
 
   create_table "users", force: :cascade do |t|

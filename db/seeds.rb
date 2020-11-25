@@ -9,7 +9,7 @@
 
 lorena = User.create(username: 'Lorena57')
 
-entry = Note.create(comments: "Testing out this bad boy", user_id: lorena.id)
+entry = Note.create(Comments: "Testing out this bad boy", User_id: lorena.id)
 
 shopping = Grocery.create(item: "Oranges", qty: 5, user_id: lorena.id)
 
