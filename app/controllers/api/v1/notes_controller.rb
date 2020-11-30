@@ -6,6 +6,8 @@ class Api::V1::NotesController < ApplicationController
     end
 
     def create
+        newUser = User.find_by(id: notes_params["user_id"])
+
         note = Note.new(notes_params) 
         if note.save
             render json: note, status: :accepted
